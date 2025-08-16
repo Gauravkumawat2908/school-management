@@ -5,8 +5,13 @@ const dotenv = require("dotenv")
 // const bodyParser = require("body-parser")
 const app = express()
 const Routes = require("./routes/route.js")
+const cors = require('cors');
+app.use(cors()); // in prod, restrict to your frontend origin
 
-const PORT = process.env.PORT || 2000
+
+// in backend/index.js (or server.js)
+const PORT = process.env.PORT || 2000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 dotenv.config();
 
