@@ -5,8 +5,6 @@ const dotenv = require("dotenv")
 // const bodyParser = require("body-parser")
 const app = express()
 const Routes = require("./routes/route.js")
-const cors = require('cors');
-app.use(cors()); // in prod, restrict to your frontend origin
 
 
 // in backend/index.js (or server.js)
